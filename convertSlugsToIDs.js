@@ -53,7 +53,7 @@ let updatedArray = stringsArray.map(str => applyMapping(str, mapping));
 // Join the array into a single string with newlines
 let updatedContent = updatedArray.join('\n');
 
-console.log(updatedContent)
+// console.log(updatedContent)
 
 // Write the updated content to a new file
 const outputFilePath = path.join(__dirname, 'outputFile.txt');
