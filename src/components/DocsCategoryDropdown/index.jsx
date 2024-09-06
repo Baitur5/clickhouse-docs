@@ -16,20 +16,18 @@ function DocsCategoryDropdown({dropdownCategory}) {
   };
 
   return (
-    <div 
+    <div
       className={styles.docsNavDropdownContainer}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <span className={styles.docsNavDropdownToolbarLink}>{dropdownCategory.title}</span>
-      {isOpen && (
-        <DropdownContent dropdownCategory={dropdownCategory} handleMouseLeave={handleMouseLeave} />
-      )}
+      <DropdownContent isOpen={isOpen} dropdownCategory={dropdownCategory} handleMouseLeave={handleMouseLeave} />
     </div>
   );
 }
 
-const DropdownContent = ({dropdownCategory, handleMouseLeave}) => {
+const DropdownContent = ({dropdownCategory, handleMouseLeave, isOpen = false}) => {
   const [hovered, setHovered] = useState(null);
   const history = useHistory();
 
@@ -39,7 +37,7 @@ const DropdownContent = ({dropdownCategory, handleMouseLeave}) => {
   };
 
   return (
-    <div className={styles.docsNavDropdownMenu}>
+    <div className={styles.docsNavDropdownMenu} style={{display: isOpen ? 'block' : 'none'}}>
       <div className={styles.docsNavMenuHeader}>{dropdownCategory.title}</div>
       <div className={styles.docsNavMenuDescription}>{dropdownCategory.description}</div>
       <hr className={styles.docsNavMenuDivider} />
