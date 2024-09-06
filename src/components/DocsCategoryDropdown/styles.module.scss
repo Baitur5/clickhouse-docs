@@ -9,12 +9,12 @@
     cursor: default;
     color: #646464;
     margin-right: 30px;
-    
+
     &:hover {
       color: black;
     }
 
-    [data-theme="dark"] & {
+    :root[data-theme="dark"] & {
       color: #C0C0C0;
 
       &:hover {
@@ -26,7 +26,7 @@
 /* .dropdownToolbarLink:hover {
     color: #646464;
 } */
-/* 
+/*
 [data-theme="dark"] .dropdownToolbarLink {
   color: #C0C0C0;
 }
@@ -55,10 +55,10 @@
     max-width: 800px;
 
     color: white;
-    
+
     background-color: #282828;
     border: 1px solid #4B4B4B;
-    
+
     padding: 15px 10px 20px 10px;
     /* padding-top: 15px; */
     /* padding-bottom: 0px; */
@@ -66,7 +66,7 @@
 
     filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.5));
   }
-  
+
 .docsNavMenuHeader {
   margin-left: 10px;
   font-size: 14px;
@@ -102,7 +102,7 @@
   border-radius: 4px;
   /* transition: background-color 0.3s ease; */
 }
-  
+
 .docsNavHovered {
   background-color: #3a3a3a;
   cursor: pointer;
@@ -129,4 +129,3 @@
   max-width: 100%;
   word-wrap: break-word;
 }
-  

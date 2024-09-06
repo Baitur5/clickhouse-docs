@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useHistory } from 'react-router-dom';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 function DocsCategoryDropdown({dropdownCategory}) {
   console.log(dropdownCategory)
