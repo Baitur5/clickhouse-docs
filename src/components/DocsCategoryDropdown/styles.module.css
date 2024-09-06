@@ -1,9 +1,9 @@
-.dropdownContainer {
+.docsNavDropdownContainer {
     position: relative;
     display: inline-block;
 }
 
-.dropdownToolbarLink {
+.docsNavDropdownToolbarLink {
     font-weight: bold;
     font-size: 14px;
     cursor: default;
@@ -45,7 +45,7 @@
   top: initial;
 } */
 
-.dropdownMenu {
+.docsNavDropdownMenu {
     position: absolute;
     top: 100%;
     left: 0;
@@ -67,66 +67,66 @@
     filter: drop-shadow(0px 10px 6px rgba(0, 0, 0, 0.5));
   }
   
-  .menuHeader {
-    margin-left: 10px;
-    font-size: 14px;
-    font-weight: bold;
-  }
+.docsNavMenuHeader {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
 
-  .menuDescription {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    font-size: 14px;
-    color: #C0C0C0;
-  }
+.docsNavMenuDescription {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #C0C0C0;
+}
 
-  .menuDivider {
-    border-top: 1px solid #4B4B4B;
-    width: 100%;
-    margin: 0;
-    margin-top: 10px;
-    margin-bottom: 5px;
-  }
+.docsNavMenuDivider {
+  border-top: 1px solid #4B4B4B;
+  width: 100%;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.docsNavMenuItems {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 10px;
+}
+
+.docsNavMenuItem {
+  padding: 10px;
+  /* background-color: #2b2b2b; */
+  /* margin-bottom: 8px; */
+  border-radius: 4px;
+  /* transition: background-color 0.3s ease; */
+}
   
-  .menuItems {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 10px;
-  }
-  
-  .menuItem {
-    padding: 10px;
-    /* background-color: #2b2b2b; */
-    /* margin-bottom: 8px; */
-    border-radius: 4px;
-    /* transition: background-color 0.3s ease; */
-  }
-  
-  .hovered {
-    background-color: #3a3a3a;
-    cursor: pointer;
-  }
-  
-  .itemTitle {
-    font-size: 14px;
-    font-weight: bold;
-    color: #e8ff32;
-  }
-  
-  .itemDescription {
-    font-size: 14px;
-    color: #C0C0C0;
-    margin-top: 4px;
-  }
-  
-  .menuItem:hover .itemDescription {
-    color: white;
-  }
-  
-  /* Ensures that text doesn't overflow the container */
-  .menuItem {
-    max-width: 100%;
-    word-wrap: break-word;
-  }
+.docsNavHovered {
+  background-color: #3a3a3a;
+  cursor: pointer;
+}
+
+.docsNavItemTitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e8ff32;
+}
+
+.docsNavItemDescription {
+  font-size: 14px;
+  color: #C0C0C0;
+  margin-top: 4px;
+}
+
+.docsNavMenuItem:hover .docsNavItemDescription {
+  color: white;
+}
+
+/* Ensures that text doesn't overflow the container */
+.docsNavMenuItem {
+  max-width: 100%;
+  word-wrap: break-word;
+}
   

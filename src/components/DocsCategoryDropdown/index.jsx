@@ -17,11 +17,11 @@ function DocsCategoryDropdown({dropdownCategory}) {
 
   return (
     <div 
-      className={styles.dropdownContainer}
+      className={styles.docsNavDropdownContainer}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <span className={styles.dropdownToolbarLink}>{dropdownCategory.title}</span>
+      <span className={styles.docsNavDropdownToolbarLink}>{dropdownCategory.title}</span>
       {isOpen && (
         <DropdownContent dropdownCategory={dropdownCategory} handleMouseLeave={handleMouseLeave} />
       )}
@@ -39,23 +39,23 @@ const DropdownContent = ({dropdownCategory, handleMouseLeave}) => {
   };
 
   return (
-    <div className={styles.dropdownMenu}>
-      <div className={styles.menuHeader}>{dropdownCategory.title}</div>
-      <div className={styles.menuDescription}>{dropdownCategory.description}</div>
-      <hr className={styles.menuDivider} />
-      <div className={styles.menuItems}>
+    <div className={styles.docsNavDropdownMenu}>
+      <div className={styles.docsNavMenuHeader}>{dropdownCategory.title}</div>
+      <div className={styles.docsNavMenuDescription}>{dropdownCategory.description}</div>
+      <hr className={styles.docsNavMenuDivider} />
+      <div className={styles.docsNavMenuItems}>
         {dropdownCategory.menuItems.map((item, index) => (
           <div
             key={index}
-            className={`${styles.menuItem} ${hovered === index ? styles.hovered : ''}`}
+            className={`${styles.docsNavMenuItem} ${hovered === index ? styles.docsNavHovered : ''}`}
             onMouseEnter={() => setHovered(index)}
             onMouseLeave={() => setHovered(null)}
             onClick={() => {
               handleNavigation(item.link);
             }}
           >
-            <div className={styles.itemTitle}>{item.title}</div>
-            <div className={styles.itemDescription}>{item.description}</div>
+            <div className={styles.docsNavItemTitle}>{item.title}</div>
+            <div className={styles.docsNavItemDescription}>{item.description}</div>
           </div>
         ))}
       </div>
